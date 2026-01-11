@@ -62,6 +62,27 @@ func main(){
 		som = som + i
 	}
 	fmt.Printf("La somme de 1 à 5 : %v\n",som)
+
+	// Exo 7 : Break/Continue
+	fmt.Println("Multiple de 0 à 1M :")
+	for i:=1; i<1000000; i++{
+		if i % 123457 == 0{
+			fmt.Println(i,"Est divisible par 123457")
+			break
+		}
+	}
+	fmt.Printf("\n")
+
+	// Exo 8 : Boucles imbriqués... étoiles.
+	for i:=1; i<=4; i++{
+		for j:=0; j<=i ; j++{
+			if j == i{
+				fmt.Printf("\n")
+				continue
+			}
+			fmt.Printf("*")
+		}
+	} //La complexité est de 0(n^2)
 	
 }
 
